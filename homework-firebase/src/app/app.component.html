@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h2>Data from Firebase Database</h2>
+  <ul *ngFor="let item of listOfData">
+      <li style="list-style: none;">
+          <h3>Id: {{item.id}}</h3>
+          <h3>Full Name: {{item.firstName}} {{item.lastName}}</h3>
+          <h3>Age: {{item.age}}</h3>
+          <h3>Hobbies: {{item.hobbies}}</h3>
+          <h3 *ngIf="!item.avatarUrl">Avatar URL: <a href="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg">No Picture</a> - generic bird pic.</h3>
+          <h3 *ngIf="item.avatarUrl">Avatar URL: <a href="{{item.avatarUrl}}">Avatar</a></h3>
+          <br>
+      </li>
+  </ul>
+</div>
